@@ -1,0 +1,23 @@
+{
+	"contracts": {
+		"MatchApp": "./contracts/MatchApp.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "128f6de0e59e3d7d4138e44f2ca3432ba82068ab778983296e781c1a74e86101"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"MatchApp"
+			]
+		}
+	}
+}
