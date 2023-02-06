@@ -26,6 +26,14 @@ access(all) contract MatchApp {
         return self.values[acc]
     }
 
+    // Public function to remove the random id assigned for oneself
+    access(all) fun remove(acc: Address): UInt64? {
+        let val = self.values[acc]
+        
+        self.values.remove(key: acc) 
+        return val
+    }
+
     // Public function that returns if another user has the same random id as the user
     access(all) fun match(acc: Address): Address? {
         self.num = unsafeRandom()
